@@ -10,7 +10,7 @@ Page({
     data: {
         columns: [],
         bookType: ['教科书', '辅导资料', '小说', '文学', '历史', '哲学', '艺术', '散文', '其他'],
-        goodsType:['拼车拼团召集','学长学姐用书','课外书籍','电子产品','美妆护肤','四六级收音机/复习资料','托福雅思相关','实验服/护目镜','其他'],
+        goodsType:['拼车拼团召集','学长学姐用书','课外书籍','电子产品','美妆护肤','四六级收音机/复习资料','托福雅思相关','实验服/护目镜','其他','特殊商品'],
         showPopup: false,
         params: {
           name:app.appUser,
@@ -249,6 +249,7 @@ Page({
             
             goods.add({
               data:{
+                time:params['pub_time'],
                 params:params,
                 title:params.title,
                 pub_id:pub_id._id

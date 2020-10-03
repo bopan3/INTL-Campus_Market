@@ -90,7 +90,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      goods.orderBy('pub_time',"desc").limit(4).get({
+    db.collection('goods').where({})
+    .orderBy('time', 'desc')
+    .get({
         success: res => {
           console.log(res.data)
           var goods = res.data
@@ -99,7 +101,7 @@ Page({
             goods:goods
           })
           console.log(this.data.goods)
-  }
+        }
       })
     } 
 })

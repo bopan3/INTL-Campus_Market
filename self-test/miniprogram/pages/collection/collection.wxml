@@ -1,5 +1,5 @@
 <!--pages/collection/collection.wxml-->
-<text class="cancel">点击即可删除收藏！\n再次进入就会更新啦！</text>
+<text class="cancel">点击即可删除收藏！\n再次进入就会更新啦！\n 如果之前收藏的宝贝突然消失了，说明它被拍走了！</text>
 <view wx:for="{{goods_list}}" wx:key="_id" bindtap="cancel" data-id='{{item._id}}'>
     <van-card
   num="1"

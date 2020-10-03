@@ -11,7 +11,8 @@ Page({
     value: '',
     goods_list:[],
     collection:"取消收藏",
-    cancel_list:[]
+    cancel_list:[],
+    expire:1
   },
   cancel:function(event){
 
@@ -31,7 +32,7 @@ Page({
                 collections.where({
                   appUser:appUser,
                   good_id:good_id
-                  
+                
                 }).get({
                   success:res=>{
                     console.log("成功")
@@ -69,6 +70,20 @@ Page({
       title: '加载中'
   })
   var that = this;
+//获取特殊商品 “收藏失效”
+ //goods.where({
+  // title:"该宝贝已经被拍走辣！"
+ //}).get({
+  // success:res=>{
+  //  that.setData({
+  //    expire:res.data[0]
+   // })
+   //}
+
+ //})
+
+ 
+
   collections.where({
     appUser:app.appUser._id
   }).get({
@@ -81,7 +96,7 @@ Page({
  if(this.data.goods_list_pre.length===0){
   setTimeout(() => {
     wx.showToast({
-      title: '还没有收藏品呐！',
+      title: '没有收藏的宝贝！',
       icon: "success",
     })
     setTimeout(() => {
@@ -93,6 +108,8 @@ Page({
   })
  }
  
+ 
+
   for(var i=0;i<this.data.goods_list_pre.length;i++)
 {
   var goods_id = this.data.goods_list_pre[i].good_id;
@@ -101,11 +118,15 @@ Page({
     _id:goods_id
   }).get({
     success:res=>{
-      var goods_list = that.data.goods_list;
-      goods_list.push(res.data[0])
-      that.setData({
-        goods_list:goods_list
-      })
+      console.log(res.data[0])
+      if ( res.data[0] !==undefined){
+        var goods_list = that.data.goods_list;
+        goods_list.push(res.data[0])
+        that.setData({
+          goods_list:goods_list
+        })
+      }
+
      
       wx.stopPullDownRefresh(); // 停止下拉刷新
       wx.hideLoading();
