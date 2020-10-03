@@ -1,0 +1,30 @@
+
+<view class="wrap">
+<!-- 整体容器 -->
+<view>
+<!-- 登录标题 -->
+<view class="welcome">
+<label >注 册 </label>
+</view>
+
+<!-- 登录表单 -->
+<view>
+<form bindsubmit='register'>
+<view class="row">
+<label class='fontset'>账号:</label> <input  class='fontset' name="name" placeholder='请输入账号'></input>
+</view>
+<view class="row">
+<label class='fontset'>密码:</label> <input class='fontset' name="psw1" password placeholder='请输入密码'></input>
+</view>
+<view class="row">
+<label class='fontset'>确认密码:</label> <input class='fontset' name="psw2" password placeholder='请再次输入密码'></input>
+</view>
+<view class="sorry" wx:if="{{nameRepeat}}">账号已被注册</view>
+<view class="sorry" wx:if="{{pswRepeat}}">两次密码不一样</view>
+<view class="sorry" wx:if="{{nullfont}}">用户名或密码不能为空</view>
+<button class="buttonGreen fontwhite" form-type="submit">注册</button>
+</form>
+
+</view>
+</view>
+</view>

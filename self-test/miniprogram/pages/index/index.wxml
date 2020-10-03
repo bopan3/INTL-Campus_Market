@@ -1,0 +1,46 @@
+<!-- <view>
+<view wx:for="{{products}}" wx:key="_id">
+<navigator url="../details/details?id={{item._id}}">
+name:<label>{{item.name}}</label>
+price:<label>{{item.price}}</label>
+size:<label>{{item.size}}</label>
+</navigator>
+</view> -->
+<view >
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiperset" >
+        <block wx:for="{{background}}" wx:key="_id">
+          <swiper-item>
+             <image src="{{item.url}}" class="slide-image" mode="scaleToFill"/>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <!-- 进入二手市场按钮部分 -->
+    <view class='middle'>
+      <button class="buttonBlue" bindtap="secondHand" >看 看 大 家 在 卖 啥 <van-icon class="icons"  size="30px" name="shopping-cart" /> </button>
+      <button class="buttonBlue" bindtap="publish" >让 我 也 来 卖 个 啥<van-icon class="icons"  size="30px" name="shopping-cart" /> </button>
+      </view>
+
+    <!-- 商品信息 -->
+ <view wx:for="{{goods}}" wx:key="_id" class="goodgood" bindtap="detail" data-id='{{item._id}}'>
+    <van-card
+  num="1"
+   tag="{{ item.params.g_type }}"
+  price="{{ item.params.price }}"
+  desc="{{ item.params.description }}"
+  title="{{ item.params.title }}"
+  thumb="{{ item.params.pic_url }}"
+  
+  thumb-mode
+/>
+ </view>
+<!-- 底部导航栏 -->
+<view>
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
+</van-tabbar>
+</view>
+</view>

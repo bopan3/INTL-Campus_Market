@@ -1,0 +1,12 @@
+<!--pages/mypublish/mypublish.wxml-->
+<text class="cancel">点击即可删除发布！\n再次进入就会更新啦！当前版本还不支持修改宝贝信息 以后会加的！ </text>
+<view wx:for="{{goods_list}}" wx:key="_id" bindtap="cancel" data-id='{{item._id}}'>
+    <van-card
+  num="1"
+   tag="{{ item.params.g_type }}"
+  price="{{ item.params.price }}"
+  desc="{{ item.params.description }}"
+  title="{{ item.params.title }}"
+  thumb="{{ item.params.pic_url[0] }}" thumb-mode
+/>
+</view>

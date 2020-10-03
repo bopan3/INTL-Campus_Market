@@ -1,0 +1,14 @@
+<!--pages/collection/collection.wxml-->
+<text class="cancel">点击即可删除收藏！\n再次进入就会更新啦！</text>
+<view wx:for="{{goods_list}}" wx:key="_id" bindtap="cancel" data-id='{{item._id}}'>
+    <van-card
+  num="1"
+   tag="{{ item.params.g_type }}"
+  price="{{ item.params.price }}"
+  desc="{{ item.params.description }}"
+  title="{{ item.params.title }}"
+  thumb="{{ item.params.pic_url[0] }}" thumb-mode
+/>
+
+ </view>
+

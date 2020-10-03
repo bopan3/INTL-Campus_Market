@@ -1,0 +1,30 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="wrap">
+<!-- 整体容器 -->
+<view>
+<!-- 登录标题 -->
+<view class="welcome">
+<label >欢  迎  登  录 ！</label>
+</view>
+
+<!-- 登录表单 -->
+<view>
+<form bindsubmit="login">
+<view class="row">
+<label class='fontset'>账号:</label> <input  class='fontset' name="name" placeholder='请输入账号'></input>
+</view>
+<view class="row">
+<label class='fontset'>密码:</label> <input class='fontset' name="psw" password placeholder='请输入密码'></input>
+</view>
+<view class="sorry" wx:if="{{notFind}}">账号或密码输入错误</view>
+<button class="buttonGreen fontwhite" form-type="submit">登  录</button>
+
+</form>
+<!-- 注册链接 -->
+<view>
+<navigator class="registerLink" url="../register/register">还没注册？请点击这里注册！</navigator>
+</view>
+
+</view>
+</view>
+</view>

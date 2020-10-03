@@ -1,0 +1,24 @@
+ <!-- 搜索框 -->
+ <van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+ <!-- 产品展示 -->
+ <view  class="goodgood">
+ <view wx:for="{{goods_list.data}}" wx:key="_id" bindtap="detail" data-id='{{item._id}}'>
+    <van-card
+  num="1"
+   tag="{{ item.params.g_type }}"
+  price="{{ item.params.price }}"
+  desc="{{ item.params.description }}"
+  title="{{ item.params.title }}"
+  thumb="{{ item.params.pic_url[0] }}" thumb-mode
+/>
+ </view>
+ </view>

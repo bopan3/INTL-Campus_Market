@@ -1,0 +1,53 @@
+/* miniprogram/pages/register/register.wxss */
+.row{
+  display: flex;
+  flex-direction: row;
+  border:solid 0.5px #F2F2F2;
+  height: 40px;
+  background-color: white;
+  align-items: center;
+  margin-top: 5px;
+  width: 90%;
+margin-left:5%;
+
+  /* justify-content: center; */
+}
+.buttonGreen{
+  background-color: 	#00CD00;
+  width: 50%;
+  margin-top:30px;
+  text-align:center;
+}
+
+.welcome{
+  font-size: large;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fontset{
+  margin-left:5%;
+  font-size: medium;
+}
+
+.wrap{
+margin-top: 15%;
+}
+
+.fontwhite{
+  color: white;
+}
+.registerLink{
+  font-size: small;
+  text-align: center;
+  margin-top: 10%;
+  color: #00868B;
+}
+
+.sorry{
+  font-size: small;
+  color: red;
+  text-align: center;
+  margin-top: 2%;
+}

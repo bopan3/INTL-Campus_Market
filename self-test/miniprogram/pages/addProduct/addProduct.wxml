@@ -1,0 +1,6 @@
+<form bindsubmit="onsubmit">
+name:<input name="name" placeholder="请输入商品名称"></input>
+price:<input name="price" placeholder="请输入商品价格"></input>
+size:<input name="size" placeholder="请输入商品大小"></input>
+<button form-type="submit">提交</button>
+</form>
