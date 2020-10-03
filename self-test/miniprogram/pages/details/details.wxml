@@ -54,6 +54,9 @@
 		<view bindtap="collect" class="call">
 			<text>{{collection}}</text>
 		</view>
+		<view bindtap="fstCopy" class="call">
+			<text>一键复制联系方式</text>
+		</view>
 		<!-- <view class="like" bindtap="modifyLikeGoods">
 			<van-icon wx:if="{{!isLike}}" name="like-o" color="white" />
 			<van-icon wx:if="{{isLike}}" name="like" color="red" />

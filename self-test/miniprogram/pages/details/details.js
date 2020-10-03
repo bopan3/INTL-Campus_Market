@@ -22,6 +22,11 @@ Page({
         collection:"收藏"
        
     },
+    fstCopy:function(){
+      wx.setClipboardData({
+        data: this.data.params.phone
+      })
+    },
     collect:function(){
       // wx.showToast({
       //   title: '收藏成功',
@@ -32,6 +37,7 @@ Page({
       this.setData({
           collection:"已收藏"
       })
+      
       
 // 数据库操作
        console.log(app.appUser._id)

@@ -2,7 +2,7 @@
 	<view bindtap="tapToShow" class="goods-type">
 		<text wx:if="{{params.g_type !== ''}}">{{params.g_type}}</text>
 		<text wx:elif="{{params.pub_type === 1}}">书籍类型</text>
-		<text wx:else>商品类型</text>
+		<text wx:else>点击选择商品类型</text>
 		<text class="iconfont icon-jiantouarrow487"></text>
 	</view>
 
@@ -25,7 +25,7 @@
 				<van-field
 				type="textarea"
 				maxlength="150"
-				placeholder="可以输入描述，150字以内叭！"
+				placeholder="可以输入描述，如新旧款式等特性，150字以内叭！"
 				autosize
 				bind:change="saveMessage"
 				data-type="description"
@@ -55,7 +55,7 @@
 	<view class="sale_detail">
 		<van-cell-group>
 			<van-field
-				placeholder="￥0.00"
+				placeholder="如希望面议请输入0"
 				border="{{ true }}"
 				bind:change="saveMessage"
 				data-type="price"
@@ -64,7 +64,7 @@
 				type="number"
 			/>
 			<van-field
-				placeholder="￥0.00"
+				placeholder="选填"
 				border="{{ true }}"
 				bind:change="saveMessage"
 				data-type="pricein"
