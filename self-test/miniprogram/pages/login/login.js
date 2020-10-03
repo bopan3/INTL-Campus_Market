@@ -26,6 +26,7 @@ Page({
           })
           
           app.appUser = res.data[0]
+          console.log("MMMMMMM")
           console.log(app.appUser)
          
           setTimeout(() => {

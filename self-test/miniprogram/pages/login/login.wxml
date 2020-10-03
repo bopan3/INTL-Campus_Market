@@ -11,10 +11,10 @@
 <view>
 <form bindsubmit="login">
 <view class="row">
-<label class='fontset'>账号:</label> <input  class='fontset' name="name" placeholder='请输入账号'></input>
+<label class='fontset'>INTL邮箱:</label> <input  class='fontset' name="name" placeholder='请输入你的INTL邮箱'></input>
 </view>
 <view class="row">
-<label class='fontset'>密码:</label> <input class='fontset' name="psw" password placeholder='请输入密码'></input>
+<label class='fontset'>密码:</label> <input class='fontset' name="psw" password placeholder='勿输邮箱本身的密码'></input>
 </view>
 <view class="sorry" wx:if="{{notFind}}">账号或密码输入错误</view>
 <button class="buttonGreen fontwhite" form-type="submit">登  录</button>

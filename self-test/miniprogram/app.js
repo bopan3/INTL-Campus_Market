@@ -17,5 +17,6 @@ App({
 
     this.globalData = {}
   },
+  //@肖树鸿 如果要设置缓存 应该在这个位置设置一个判断条件来决定是让appuse是none还是从缓存提取
   appUser:null
 })
